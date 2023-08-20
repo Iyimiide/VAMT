@@ -60,13 +60,16 @@
         .slide {
             display: none;
             text-align: center;
+            width: 70%;
         }
 
         img {
-            max-width: 70%;
-            height: auto;
+            width: 100%; /* Set width to 100% of the slide container */
+            height: auto; /* Maintain aspect ratio */
             display: block;
             margin: auto;
+            max-height: 300px; /* Set maximum height */
+            object-fit: cover;
         }
 
         .prev, .next {
