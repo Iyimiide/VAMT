@@ -1,66 +1,203 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <style>
-    /* Your existing CSS code here */
-    /* ... */
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        /* Your embedded CSS code here */
+        /* Reset some default styling */
+        body, h1, h2, p, ul, li {
+            margin: 0;
+            padding: 0;
+        }
 
-    /* New Foundation Events section */
-    .foundation-events {
-      padding: 40px;
-      background-color: #f9f9f9;
-      margin-top: 30px;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    }
+        /* Basic styling */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+        }
 
-    /* New Foundation Stats section */
-    .foundation-stats {
-      padding: 40px;
-      background-color: white;
-      margin-top: 30px;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    }
-  </style>
-  <title>VAMT Charity</title>
+        header {
+            background-color: #333;
+            color: white;
+            padding: 10px 0;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+        }
+
+        nav li {
+            margin: 0 15px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: white;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #66ccff;
+        }
+
+        .slideshow-container {
+            position: relative;
+            max-width: 1000px;
+            margin: auto;
+        }
+
+        .slide {
+            display: none;
+        }
+
+        img {
+            width: 100%;
+            height: auto;
+        }
+
+        .prev, .next {
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 18px;
+        }
+
+        .next {
+            right: 10px;
+        }
+
+        .prev {
+            left: 10px;
+        }
+
+        .redirect-link {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .redirect-link a {
+            background-color: #66ccff;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+        }
+
+        .areas-of-work {
+            padding: 40px;
+            background-color: white;
+            margin-top: 30px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .foundation-events {
+            padding: 40px;
+            background-color: #f9f9f9;
+            margin-top: 30px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .foundation-stats {
+            padding: 40px;
+            background-color: white;
+            margin-top: 30px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            text-align: center;
+        }
+
+        /* Add more custom styles as needed */
+
+        /* Responsive styles */
+        @media screen and (max-width: 768px) {
+            .slideshow-container {
+                max-width: 100%;
+            }
+
+            .redirect-link a {
+                padding: 8px 15px;
+            }
+
+            .areas-of-work,
+            .foundation-events,
+            .foundation-stats {
+                padding: 20px;
+            }
+        }
+    </style>
+    <title>VAMT Charity</title>
 </head>
 <body>
-  <header>
-    <!-- Your navigation and header content here -->
-  </header>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="who-we-are.html">Who We Are</a></li>
+                <li><a href="vamt-archives.html">VAMT Archives</a></li>
+                <li><a href="donations.html">Donate</a></li>
+                <li><a href="admin-login.html">Admin</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
 
-  <div class="slideshow-container">
-    <!-- Slideshow images -->
-    <!-- ... -->
-  </div>
+    <div class="slideshow-container">
+        <!-- Slideshow images -->
+        <div class="slide fade">
+            <img src="Assets/image1.jpg" alt="Slide 1">
+        </div>
+        <div class="slide fade">
+            <img src="Assets/image2.jpg" alt="Slide 2">
+        </div>
+        <div class="slide fade">
+            <img src="Assets/image3.jpg" alt="Slide 3">
+        </div>
+        <!-- Add more slides as needed -->
 
-  <div class="redirect-link">
-    <!-- ... -->
-  </div>
+        <!-- Previous and Next buttons -->
+        <a class="prev" onclick="changeSlide(-1)">&#10094;</a>
+        <a class="next" onclick="changeSlide(1)">&#10095;</a>
+    </div>
 
-  <section class="areas-of-work">
-    <!-- ... -->
-  </section>
+    <div class="redirect-link">
+        <a href="donations.html">Get Involved</a>
+    </div>
 
-  <!-- New Foundation Events section -->
-  <section class="foundation-events">
-    <h2>Foundation Events</h2>
-    <p>Stay updated with our latest events and activities.</p>
-    <!-- Add content about your foundation events -->
-  </section>
+    <section class="areas-of-work">
+        <h2>Areas of Our Work</h2>
+        <p>Learn about the different areas where VAMT is making a difference.</p>
+        <!-- Add content about your areas of work -->
+    </section>
 
-  <!-- New Foundation Stats section -->
-  <section class="foundation-stats">
-    <h2>Foundation Stats</h2>
-    <ul>
-      <li>Number of Beneficiaries: 1000</li>
-      <li>Number of Donors: 500</li>
-      <li>Number of Countries Reached: 20</li>
-    </ul>
-  </section>
+    <section class="foundation-events">
+        <h2>Foundation Events</h2>
+        <p>Explore our upcoming and past foundation events.</p>
+        <!-- Add content about your foundation events -->
+    </section>
 
-  <script src="script.js"></script> <!-- Link to your JavaScript file -->
+    <section class="foundation-stats">
+        <div>
+            <h3>Beneficiaries</h3>
+            <p>1,500</p>
+        </div>
+        <div>
+            <h3>Donors</h3>
+            <p>800</p>
+        </div>
+        <div>
+            <h3>Countries</h3>
+            <p>25</p>
+        </div>
+    </section>
+
+    <!-- Add the rest of your content here -->
+
+    <script src="script.js"></script> <!-- Link to your JavaScript file -->
 </body>
 </html>
-
