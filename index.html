@@ -6,7 +6,7 @@
     <style>
         /* Your embedded CSS code here */
         /* Reset some default styling */
-        body, h1, h2, p, ul, li, img {
+        body, h1, h2, p, ul, li {
             margin: 0;
             padding: 0;
         }
@@ -14,56 +14,128 @@
         /* Basic styling */
         body {
             font-family: Arial, sans-serif;
-            background-color: #fff;
-            color: #333;
-            line-height: 1.6;
+            background-color: #f0f0f0;
         }
 
-        header, main, footer {
-            padding: 20px;
-            margin: 0 auto;
-            max-width: 800px;
+        header {
+            background-color: #333;
+            color: white;
+            padding: 10px 0;
         }
 
-        h2 {
-            margin-top: 20px;
-            font-size: 28px;
-            color: #333;
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+        }
+
+        nav li {
+            margin: 0 15px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: white;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #66ccff;
+        }
+
+        .slideshow-container {
+            position: relative;
+            max-width: 1000px;
+            margin: auto;
+        }
+
+        .slide {
+            display: none;
             text-align: center;
         }
 
         img {
-            max-width: 50%;
+            max-width: 70%;
             height: auto;
             display: block;
-            margin: 40px auto;
-            border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            margin: auto;
         }
 
-        p {
+        .prev, .next {
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
             font-size: 18px;
-            color: #555;
-            text-align: justify;
-            margin-bottom: 30px;
         }
+
+        .next {
+            right: 10px;
+        }
+
+        .prev {
+            left: 10px;
+        }
+
+        .redirect-link {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .redirect-link a {
+            background-color: #66ccff;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+        }
+
+        .areas-of-work,
+        .foundation-events,
+        .foundation-stats {
+            padding: 40px;
+            text-align: center;
+            color: #333;
+        }
+
+        .foundation-events {
+            background-color: #f9f9f9;
+        }
+
+        .foundation-stats {
+            background-color: white;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            font-weight: bold;
+        }
+
+        .foundation-stats div {
+            padding: 20px;
+            border: 1px solid #e0e0e0;
+            border-radius: 10px;
+        }
+
+        /* Add more custom styles as needed */
 
         /* Responsive styles */
         @media screen and (max-width: 768px) {
-            body {
-                font-size: 16px;
+            .slideshow-container {
+                max-width: 100%;
             }
 
-            h2 {
-                font-size: 24px;
+            .redirect-link a {
+                padding: 8px 15px;
             }
 
-            img {
-                max-width: 70%;
+            .areas-of-work,
+            .foundation-events,
+            .foundation-stats {
+                padding: 20px;
             }
         }
     </style>
-    <title>VAMT Archives - Life History of Victoria Aderonke Joose Adegbite</title>
+    <title>VAMT Charity</title>
 </head>
 <body>
     <header>
@@ -78,30 +150,58 @@
             </ul>
         </nav>
     </header>
-    
-    <main>
-        <section class="archives-content">
-            <h2>Life History of Victoria Aderonke Joose Adegbite (Nee Olasinde)</h2>
-            <p>Victoria Aderonke Joose was born to the family of Late Pa. Solomon Oguntunji Olasinde and Late Mama Elizabeth Olatorera Asabi Olasinde on 18th February 1933 at Olowologa Compound, Idi- Agbon Oke-Aree, Iree in Boripe Local Government Area, State of Osun.
-Victoria Aderonke had her early education at Baptist Day School, Oke Aree, Iree from 1944-1951. She proceeded to Abeokuta early in 1952 for her midwifery course at the then Macotta Nursing Training Centre, till 1954.
-            </p>
-            <img src="Assets/gran.jpg" alt="Victoria Aderonke Joose Adegbite">
-            <p>
-               On graduation, Aderonke worked at Baptist Hospital, Ogbomoso and later at Local Authority Maternity Centre Iragbiji, from where she got employed by the then Northern Nigerian Government and was posted to the General Hospital in Offa. While working at the General Hospital in Offa, she met and started dating Emmanuel Adebisi Adegbite who was working as a Staff Nurse in the same hospital. After a while, she returned to her local government in the then Oyo State (now Osun State) and she was posted to Iragbiji near Ikirun. 
-Though she parted physically with Emmanuel, the love between them continued to grow from strength to strength and they later got married. As a result of their marriage, Aderonke returned to Offa to live with her husband and she was re-appointed at General Hospital, Offa as a Midwife. Within a few years, they were blessed with two children, Bolanle and Adewale (of blessed memory).
-In March 1960, Emmanuel got admission to the Sefton General Hospital in Liverpool, United Kingdom for further studies. A year later in 1961, Aderonke got admission to study nursing also in Sefton General Hospital, Liverpool, United Kingdom. Thereafter Aderonke qualified as a State Registered Nurse and State Midwife and Emmanuel qualified as a State Registered Nurse in the UK, they both returned to Nigeria. Aderonke started working as a Nursing Sister in Wusasa Mission Hospital, Zaria, while Emmanuel went to Ahmadu Bello University, Zaria to study law.
-On completion of Emmanuel’s law degree, he was appointed by the Northwestern State if Nigeria and posted to Minna, now in Niger State. Aderonke moved to Minna in 1970 and joined the General Hospital, Minna as a Nursing Sister. After years of selfless service in Northern Nigeria, the family moved to Ilorin in Kwara State where Aderonke joined Kwara Polytechnic Medical Centre and rose to the position of a Chief Nursing Matron before she retired from active service.
-After retirement, Aderonke dabbled into small businesses to keep her busy. She has a provision store and then a Chemist, but as a selfless person she gave away most of her stock to people who couldn’t afford them. She continuously travelled to the UK, USA and Nigeria to visit her children and families there and obtained her British Citizenship during this period.
-She carried out charitable activities in the UK and was involved in numerous church and community activities there. Aderonke surrounded herself with her children, grandchildren, families and friends throughout her life.
-She answered her divine appointment to the Lord on the 10th of April 2014.
-It is impossible to talk about Aderonke without talking about her love and service to the Lord. She was a trailblazer, a woman of impeccable integrity, absolute humility, kindness that knew no boundaries, wisdom of the Lord, joy that knew no limit and contentment. She never questioned God regarding any portion of her life and saw the testimonies of all the tests that came her way.  She lived a fulfilled and grateful life with the unfailing love of all who truly loved and adored her. She called on the Lord at all times and the Lord never once failed her. We have joy in the knowledge, that she is resting in the Lord, while watching over her beloved ones till we meet to part no more in Jesus’ name. Amen
-Aderonke is survived by her children, grandchildren and gray grand children. May her gentle soul rest in perfect peace in Jesus’ name. Amen
-            </p>
-        </section>
-    </main>
-    
-    <footer>
-        <!-- Footer content here -->
-    </footer>
+
+    <div class="slideshow-container">
+        <!-- Slideshow images -->
+        <div class="slide fade">
+            <img src="Assets/image1.jpg" alt="Slide 1">
+        </div>
+        <div class="slide fade">
+            <img src="Assets/image2.jpg" alt="Slide 2">
+        </div>
+        <div class="slide fade">
+            <img src="Assets/image3.jpg" alt="Slide 3">
+        </div>
+        <!-- Add more slides as needed -->
+
+        <!-- Previous and Next buttons -->
+        <a class="prev" onclick="changeSlide(-1)">&#10094;</a>
+        <a class="next" onclick="changeSlide(1)">&#10095;</a>
+    </div>
+
+    <div class="redirect-link">
+        <a href="donations.html">Get Involved</a>
+    </div>
+
+    <section class="areas-of-work">
+        <h2>Areas of Our Work</h2>
+        <p>Learn about the different areas where VAMT is making a difference.</p>
+        <!-- Add content about your areas of work -->
+    </section>
+
+    <section class="foundation-events">
+        <h2>Foundation Events</h2>
+        <p>Explore our upcoming and past foundation events.</p>
+        <!-- Add content about your foundation events -->
+    </section>
+
+    <section class="foundation-stats">
+        <div>
+            <h3>Beneficiaries</h3>
+            <p>1,500</p>
+        </div>
+        <div>
+            <h3>Donors</h3>
+            <p>800</p>
+        </div>
+        <div>
+            <h3>Countries</h3>
+            <p>25</p>
+        </div>
+    </section>
+
+    <!-- Add the rest of your content here -->
+
+    <script src="script.js"></script> <!-- Link to your JavaScript file -->
 </body>
 </html>
