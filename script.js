@@ -22,7 +22,7 @@ function showSlides(n) {
   slideIndex++;
 
   // Set a timeout to call the function again after 3 seconds
-  setTimeout(showSlides, 3000);
+  setTimeout(showSlides, 5000);
 }
 
 // Initialize the slideshow
