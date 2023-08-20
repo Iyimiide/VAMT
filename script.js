@@ -21,8 +21,12 @@ function showSlides(n) {
   slides[slideIndex].style.display = "block";
   slideIndex++;
 
+  if (slideIndex >= slides.length) {
+    slideIndex = 0; // Reset slideIndex after one full round
+  }
+
   // Set a timeout to call the function again after 5 seconds (5000 milliseconds)
-  setTimeout(showSlides, 5000);
+  setTimeout(showSlides, 5000, slideIndex);
 }
 
 // Initialize the slideshow
