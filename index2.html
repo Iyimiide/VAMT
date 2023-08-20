@@ -4,11 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
-        /* Your embedded CSS code here */
-        /* ... (existing styles) ... */
+        /* Reset some default styling */
+        body, h1, h2, p, ul, li {
+            margin: 0;
+            padding: 0;
+        }
 
-        /* Add some playful touches */
+        /* Basic styling */
         body {
+            font-family: Arial, sans-serif;
             background-color: #f0f0f0;
             animation: colorChange 10s infinite alternate;
         }
@@ -18,6 +22,8 @@
             50% { background-color: #ffcc00; }
             100% { background-color: #f0f0f0; }
         }
+
+        /* ... (existing styles) ... */
 
         /* More creative animations and transitions */
         nav a {
@@ -43,6 +49,22 @@
 
         /* Add more creative styles as needed */
 
+        /* Responsive styles */
+        @media screen and (max-width: 768px) {
+            .slideshow-container {
+                max-width: 100%;
+            }
+
+            .redirect-link a {
+                padding: 8px 15px;
+            }
+
+            .areas-of-work,
+            .foundation-events,
+            .foundation-stats {
+                padding: 20px;
+            }
+        }
     </style>
     <title>VAMT Charity</title>
 </head>
@@ -77,11 +99,11 @@
 
     <section class="foundation-stats">
         <div>
-            <h3>🎈 Beneficiaries</h3>
+            <h3>Beneficiaries</h3>
             <p>1,500</p>
         </div>
         <div>
-            <h3>🎁 Donors</h3>
+            <h3>Donors</h3>
             <p>800</p>
         </div>
         <div>
