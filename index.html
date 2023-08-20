@@ -19,12 +19,11 @@
             animation: colorChange 10s infinite alternate;
         }
 
-            @keyframes colorChange {
-                0% { background-color: #f4e7d2; } /* Warm beige */
-                50% { background-color: #c85a54; } /* Wine red */
-                100% { background-color: #f4e7d2; } /* Back to warm beige */
-            }
-
+        @keyframes colorChange {
+            0% { background-color: #f4e7d2; } /* Warm beige */
+            50% { background-color: #c85a54; } /* Wine red */
+            100% { background-color: #f4e7d2; } /* Back to warm beige */
+        }
 
         header {
             background-color: #333;
@@ -99,6 +98,37 @@
             text-decoration: none;
         }
 
+        .areas-of-work {
+            padding: 40px;
+            text-align: center;
+            color: #333;
+        }
+
+        .work-area {
+            position: relative;
+        }
+
+        .work-area h3 {
+            cursor: pointer;
+        }
+
+        .work-area p {
+            display: none;
+            padding: 10px;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            width: 100%;
+            background-color: white;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+            z-index: 1;
+        }
+
+        .work-area:hover p {
+            display: block;
+        }
+
         .foundation-events,
         .foundation-stats {
             padding: 40px;
@@ -106,40 +136,34 @@
             color: #333;
         }
 
-.foundation-events {
-    padding: 40px;
-    text-align: center;
-    color: #333;
-    background-color: #f9f9f9;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
+        .foundation-events {
+            background-color: #f9f9f9;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
 
-.event {
-    margin: 20px 0;
-    padding: 20px;
-    background-color: white;
-    border-radius: 10px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
+        .event {
+            margin: 20px 0;
+            padding: 20px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
 
-.event h3 {
-    font-size: 20px;
-    margin-bottom: 10px;
-}
+        .event h3 {
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
 
-.event p {
-    font-size: 14px;
-    margin-bottom: 8px;
-}
+        .event p {
+            font-size: 14px;
+            margin-bottom: 8px;
+        }
 
-.event-description {
-    font-size: 14px;
-    color: #777;
-}
-
-/* Add more custom styles as needed */
-
+        .event-description {
+            font-size: 14px;
+            color: #777;
+        }
 
         .foundation-stats {
             background-color: white;
@@ -154,32 +178,6 @@
             border: 1px solid #e0e0e0;
             border-radius: 10px;
         }
-                .areas-of-work,
-                .work-area {
-            position: relative;
-        }
-        
-        .work-area h3 {
-            cursor: pointer;
-        }
-        
-        .work-area p {
-            display: none;
-            padding: 10px;
-            position: absolute;
-            top: 100%;
-            left: 0;
-            width: 100%;
-            background-color: white;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-            border-radius: 5px;
-            z-index: 1;
-        }
-        
-        .work-area:hover p {
-            display: block;
-        }
-        /* Add more custom styles as needed */
 
         /* Responsive styles */
         @media screen and (max-width: 768px) {
@@ -243,47 +241,49 @@
     </div>
 
     <section class="areas-of-work">
-    <h2>Areas of Our Work</h2>
-    <p>Learn about the different areas where VAMT is making a difference.</p>
-    <div class="work-area">
-    <i class="fas fa-graduation-cap"></i>
-    <h3>Education Initiatives</h3>
-    <p>Lorem ipsum dolor sit amet...</p>
-</div>
-<div class="work-area">
-    <i class="fas fa-heartbeat"></i>
-    <h3>Healthcare Programs</h3>
-    <p>Curabitur non lorem et sapien...</p>
-</div>
-<div class="work-area">
-    <i class="fas fa-hands-helping"></i>
-    <h3>Community Outreach</h3>
-    <p>Fusce vel libero eu lectus dictum...</p>
-</div>
-<!-- Add more work areas as needed -->
-
-</section>
-
+        <h2>Areas of Our Work</h2>
+        <p>Learn about the different areas where VAMT is making a difference.</p>
+        <div class="work-area">
+            <i class="fas fa-graduation-cap"></i>
+            <h3>Education Initiatives</h3>
+            <p>Lorem ipsum dolor sit amet...</p>
+        </div>
+        <div class="work-area">
+            <i class="fas fa-heartbeat"></i>
+            <h3>Healthcare Programs</h3>
+            <p>Curabitur non lorem et sapien...</p>
+        </div>
+        <div class="work-area">
+            <i class="fas fa-hands-helping"></i>
+            <h3>Community Outreach</h3>
+            <p>Fusce vel libero eu lectus dictum...</p>
+        </div>
+        <!-- Add more work areas as needed -->
+    </section>
 
     <section class="foundation-events">
-    <h2>Foundation Events</h2>
-    <p>Explore our upcoming and past foundation events.</p>
-    <div class="event">
-    <h3><i class="fas fa-calendar-alt"></i> Upcoming Event: Charity Gala</h3>
-    <!-- ... rest of the event details ... -->
-</div>
-<div class="event">
-    <h3><i class="fas fa-calendar-alt"></i> Past Event: Community Cleanup</h3>
-    <!-- ... rest of the event details ... -->
-</div>
-<div class="event">
-    <h3><i class="fas fa-calendar-alt"></i> Upcoming Event: Workshop Series</h3>
-    <!-- ... rest of the event details ... -->
-</div>
-<!-- Add more events as needed -->
-
-</section>
-
+        <h2>Foundation Events</h2>
+        <p>Explore our upcoming and past foundation events.</p>
+        <div class="event">
+            <h3>Upcoming Event: Charity Gala</h3>
+            <p>Date: [Insert Date]</p>
+            <p>Location: [Insert Location]</p>
+            <p>Join us for a glamorous night of giving and celebration at our annual Charity Gala event.</p>
+        </div>
+        <div class="event">
+            <h3>Past Event: Community Cleanup</h3>
+            <p>Date: [Insert Date]</p>
+            <p>Location: [Insert Location]</p>
+            <p>Our dedicated volunteers came together to clean and beautify our local community.</p>
+        </div>
+        <div class="event">
+            <h3>Upcoming Event: Workshop Series</h3>
+            <p>Date: [Insert Date]</p>
+            <p>Location: [Insert Location]</p>
+            <p>Join our educational workshops covering a range of topics to empower our community.</p>
+        </div>
+        <!-- Add more events as needed -->
+    </section>
 
     <section class="foundation-stats">
         <div>
