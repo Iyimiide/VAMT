@@ -21,7 +21,7 @@ function showSlides(n) {
   slides[slideIndex].style.display = "block";
   slideIndex++;
 
-  // Set a timeout to call the function again after 3 seconds
+  // Set a timeout to call the function again after 5 seconds (5000 milliseconds)
   setTimeout(showSlides, 5000);
 }
 
