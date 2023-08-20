@@ -5,10 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Us</title>
     <style>
+        /* Your embedded CSS code here */
         /* Reset some default styling */
-        *,
-        *::before,
-        *::after {
+        body, h1, h2, p, ul, li, form, label, input, select, textarea, button {
             margin: 0;
             padding: 0;
             border: 0;
@@ -24,7 +23,6 @@
             background-color: #f0f0f0;
             color: #333;
             line-height: 1.6;
-            margin: 0;
         }
 
         header {
@@ -121,7 +119,14 @@
 <body>
     <header>
         <nav>
-            <!-- Navigation bar (same as previous code) -->
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="who-we-are.html">Who We Are</a></li>
+                <li><a href="vamt-archives.html">VAMT Archives</a></li>
+                <li><a href="donations.html">Donate</a></li>
+                <li><a href="admin-login.html">Admin</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
         </nav>
     </header>
     
@@ -129,12 +134,40 @@
         <section class="contact-form">
             <h2>Contact Us</h2>
             <form action="process_form.php" method="post">
-                <!-- Form content (same as previous code) -->
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                
+                <label for="query">Query Type:</label>
+                <select id="query" name="query" required>
+                    <option value="general">General Inquiry</option>
+                    <option value="donation">Donation</option>
+                    <option value="volunteer">Volunteer</option>
+                    <!-- Add more options as needed -->
+                </select>
+                
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+                
+                <button type="submit">Submit</button>
             </form>
         </section>
 
         <section class="contact-info">
-            <!-- Contact info content (same as previous code) -->
+            <h3>Base Address</h3>
+            <p>123 VAMT Street, Cityville</p>
+            <p>Country</p>
+
+            <h3>Operating Hours</h3>
+            <p>Monday - Friday: 9:00 AM - 5:00 PM</p>
+            <p>Saturday: 10:00 AM - 2:00 PM</p>
+            <p>Sunday: Closed</p>
+
+            <h3>Mailing Address</h3>
+            <p>P.O. Box 456</p>
+            <p>Cityville, Country</p>
         </section>
     </main>
     
