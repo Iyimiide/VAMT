@@ -99,41 +99,42 @@
          /* Responsive styles */
 @media screen and (max-width: 768px) {
     /* Slideshow container styles */
-    .slideshow-container {
-        max-width: 70%;
-    }
-        position: relative;
-            max-width: 1000px;
-            margin: auto;
-        }
+   .slideshow-container {
+    position: relative;
+    max-width: 1000px;
+    margin: auto;
+    overflow: hidden; /* Hide content that goes beyond the container */
+    height: 400px; /* Set the desired height for the slideshow */
+}
 
-        .slide {
-            display: none;
-            text-align: center;
-        }
+.slide {
+    display: none;
+    text-align: center;
+    width: 100%; /* Set the width to match the container */
+}
 
-        img {
-            max-width: 70%;
-            height: auto;
-            display: block;
-            margin: auto;
-        }
+img {
+    width: 100%; /* Make the image fill the width of the slide */
+    height: 100%; /* Maintain the aspect ratio */
+    object-fit: cover; /* Maintain image aspect ratio while covering the area */
+}
 
-        .prev, .next {
-            cursor: pointer;
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            font-size: 18px;
-        }
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 18px;
+}
 
-        .next {
-            right: 10px;
-        }
+.next {
+    right: 10px;
+}
 
-        .prev {
-            left: 10px;
-        }
+.prev {
+    left: 10px;
+}
+
 
         .redirect-link {
             text-align: center;
