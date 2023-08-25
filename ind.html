@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+        /* Reset some default styling */
+        body, h1, h2, p, ul, li {
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Basic styling */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            animation: colorChange 10s infinite alternate;
+        }
+
+        @keyframes colorChange {
+            0% { background-color: #f4e7d2; } /* Warm beige */
+            50% { background-color: #c85a54; } /* Wine red */
+            100% { background-color: #f4e7d2; } /* Back to warm beige */
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            padding: 10px 0;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+        }
+
+        nav li {
+            position: relative; /* Add this line for dropdown positioning */
+            margin: 0 15px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: white;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #66ccff;
+        }
+
+        /* Dropdown menu styles */
+        ul.dropdown-menu {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background-color: #333;
+            border-top: 2px solid #66ccff;
+            z-index: 1;
+            min-width: 150px;
+        }
+
+        nav li:hover > ul.dropdown-menu {
+            display: block;
+        }
+
+        ul.dropdown-menu li {
+            margin: 0;
+        }
+
+        ul.dropdown-menu a {
+            color: white;
+            padding: 10px;
+            display: block;
+            text-decoration: none;
+            transition: background-color 0.3s;
+        }
+
+        ul.dropdown-menu a:hover {
+            background-color: #66ccff;
+        }
+
+        /* Additional styles for a fancy look */
+        .redirect-link a {
+            background-color: #66ccff;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: background-color 0.3s;
+        }
+
+        .redirect-link a:hover {
+            background-color: #ff3366;
+        }
+
+        /* Rest of the styles remain unchanged */
+
+    </style>
+    <title>VAMT Charity</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="who-we-are.html">Who We Are</a></li>
+                <li>
+                    <a href="vamt-archives.html">VAMT Archives &#9662;</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="vamt-archives.html#about-va">About VA</a></li>
+                        <li><a href="vamt-archives.html#testimonials">Testimonials</a></li>
+                        <li><a href="vamt-archives.html#vamt-mission">VAMT's Mission</a></li>
+                    </ul>
+                </li>        
+                <li><a href="donations.html">Donate</a></li>
+                <li><a href="admin-login.html">Admin</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Rest of your HTML content -->
+
+    <footer>
+        <section class="footer-content">
+            <p>&copy; 2023 VAMT Charity. All rights reserved.</p>
+            <ul>
+                <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                <li><a href="terms-of-use.html">Terms of Use</a></li>
+            </ul>
+        </section>
+    </footer>
+    <script src="script.js"></script> <!-- Link to your JavaScript file -->
+</body>
+</html>
