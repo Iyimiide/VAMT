@@ -212,81 +212,84 @@
             color: #66ccff;
         }
 
-        /* Responsive styles */
-        @media screen and (max-width: 768px) {
-            .slideshow-container {
-                max-width: 100%;
-            }
-            /* Dropdown menu styles */
-nav ul li {
-    position: relative;
-}
+    /* Responsive styles */
+@media screen and (max-width: 768px) {
+    /* Slideshow container styles */
+    .slideshow-container {
+        max-width: 100%;
+    }
 
-nav ul li:hover > ul.dropdown-menu {
-    display: block;
-}
+    /* Dropdown menu styles */
+    nav ul li {
+        position: relative;
+    }
 
-ul.dropdown-menu {
-    display: none;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    background-color: #333;
-    border-top: 2px solid #66ccff;
-    z-index: 1;
-    min-width: 150px;
-}
+    nav ul li:hover > ul.dropdown-menu {
+        display: block;
+    }
 
-ul.dropdown-menu li {
-    margin: 0;
-}
+    ul.dropdown-menu {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background-color: #333;
+        border-top: 2px solid #66ccff;
+        z-index: 1;
+        min-width: 150px;
+    }
 
-ul.dropdown-menu a {
-    color: white;
-    padding: 10px;
-    display: block;
-    text-decoration: none;
-    transition: background-color 0.3s;
-}
+    ul.dropdown-menu li {
+        margin: 0;
+    }
 
-ul.dropdown-menu a:hover {
-    background-color: #66ccff;
-}
+    ul.dropdown-menu a {
+        color: white;
+        padding: 10px;
+        display: block;
+        text-decoration: none;
+        transition: background-color 0.3s;
+    }
 
-            .redirect-link a {
-                padding: 8px 15px;
-            }
+    ul.dropdown-menu a:hover {
+        background-color: #66ccff;
+    }
 
-            .areas-of-work,
-            .foundation-events,
-            .foundation-stats {
-                padding: 20px;
-            }
-        }
+    /* Additional responsive styles */
+    .redirect-link a {
+        padding: 8px 15px;
+    }
+
+    .areas-of-work,
+    .foundation-events,
+    .foundation-stats {
+        padding: 20px;
+    }
+}       
+        
     </style>
     <title>VAMT Charity</title>
 </head>
 <body>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="who-we-are.html">Who We Are</a></li>
-        <li>
-            <a href="vamt-archives.html">VAMT Archives &#9662;</a>
-            <ul class="dropdown-menu">
-                <li><a href="vamt-archives.html#about-va">About VA</a></li>
-                <li><a href="vamt-archives.html#testimonials">Testimonials</a></li>
-                <li><a href="vamt-archives.html#vamt-mission">VAMT's Mission</a></li>
-            </ul>
-        </li>        
-                <li><a href="donations.html">Donate</a></li>
-                <li><a href="admin-login.html">Admin</a></li>
-                <li><a href="contact.html">Contact Us</a></li>
-            </ul>
-        </nav>
-    </header>
-
+   <header>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="who-we-are.html">Who We Are</a></li>
+            <li>
+                <a href="vamt-archives.html">VAMT Archives &#9662;</a>
+                <ul class="dropdown-menu">
+                    <li><a href="vamt-archives.html#about-va">About VA</a></li>
+                    <li><a href="vamt-archives.html#testimonials">Testimonials</a></li>
+                    <li><a href="vamt-archives.html#vamt-mission">VAMT's Mission</a></li>
+                </ul>
+            </li>
+            <li><a href="donations.html">Donate</a></li>
+            <li><a href="admin-login.html">Admin</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+    </nav>
+</header>
     <div class="slideshow-container">
         <!-- Slideshow images -->
         <div class="slide fade">
