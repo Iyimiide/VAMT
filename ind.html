@@ -82,7 +82,7 @@
         ul.dropdown-menu a:hover {
             background-color: #66ccff;
         }
-
+        
         /* Additional styles for a fancy look */
         .redirect-link a {
             background-color: #66ccff;
@@ -95,6 +95,172 @@
 
         .redirect-link a:hover {
             background-color: #ff3366;
+        }
+         /* Responsive styles */
+@media screen and (max-width: 768px) {
+    /* Slideshow container styles */
+    .slideshow-container {
+        max-width: 100%;
+    }
+        position: relative;
+            max-width: 1000px;
+            margin: auto;
+        }
+
+        .slide {
+            display: none;
+            text-align: center;
+        }
+
+        img {
+            max-width: 70%;
+            height: auto;
+            display: block;
+            margin: auto;
+        }
+
+        .prev, .next {
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 18px;
+        }
+
+        .next {
+            right: 10px;
+        }
+
+        .prev {
+            left: 10px;
+        }
+
+        .redirect-link {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .redirect-link a {
+            background-color: #66ccff;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+        }
+
+        .areas-of-work {
+            padding: 40px;
+            text-align: center;
+            color: #333;
+        }
+
+        .work-area {
+            position: relative;
+        }
+
+        .work-area h3 {
+            cursor: pointer;
+        }
+
+        .work-area p {
+            display: none;
+            padding: 10px;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            width: 100%;
+            background-color: white;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+            z-index: 1;
+        }
+
+        .work-area:hover p {
+            display: block;
+        }
+
+        .foundation-events {
+            padding: 40px;
+            text-align: center;
+            color: #333;
+            background-color: #f9f9f9;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .event {
+            margin: 20px 0;
+            padding: 20px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .event h3 {
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+
+        .event p {
+            font-size: 14px;
+            margin-bottom: 8px;
+        }
+
+        .event-description {
+            font-size: 14px;
+            color: #777;
+        }
+
+        .foundation-stats {
+            background-color: white;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            font-weight: bold;
+        }
+
+        .foundation-stats div {
+            padding: 20px;
+            border: 1px solid #e0e0e0;
+            border-radius: 10px;
+        }
+
+        /* Responsive styles */
+         /* Footer styles */
+        footer {
+            background-color: #333;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .footer-content p {
+            margin: 0;
+        }
+
+        .footer-content ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            gap: 20px;
+        }
+
+        .footer-content a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .footer-content a:hover {
+            color: #66ccff;
         }
 
         /* Rest of the styles remain unchanged */
