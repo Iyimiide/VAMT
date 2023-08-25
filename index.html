@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <style>
-        /* Your embedded CSS code here */
         /* Reset some default styling */
         body, h1, h2, p, ul, li {
             margin: 0;
@@ -218,6 +217,41 @@
             .slideshow-container {
                 max-width: 100%;
             }
+            /* Dropdown menu styles */
+nav ul li {
+    position: relative;
+}
+
+nav ul li:hover > ul.dropdown-menu {
+    display: block;
+}
+
+ul.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #333;
+    border-top: 2px solid #66ccff;
+    z-index: 1;
+    min-width: 150px;
+}
+
+ul.dropdown-menu li {
+    margin: 0;
+}
+
+ul.dropdown-menu a {
+    color: white;
+    padding: 10px;
+    display: block;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+ul.dropdown-menu a:hover {
+    background-color: #66ccff;
+}
 
             .redirect-link a {
                 padding: 8px 15px;
@@ -238,7 +272,14 @@
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="who-we-are.html">Who We Are</a></li>
-                <li><a href="vamt-archives.html">VAMT Archives</a></li>
+        <li>
+            <a href="vamt-archives.html">VAMT Archives &#9662;</a>
+            <ul class="dropdown-menu">
+                <li><a href="vamt-archives.html#about-va">About VA</a></li>
+                <li><a href="vamt-archives.html#testimonials">Testimonials</a></li>
+                <li><a href="vamt-archives.html#vamt-mission">VAMT's Mission</a></li>
+            </ul>
+        </li>        
                 <li><a href="donations.html">Donate</a></li>
                 <li><a href="admin-login.html">Admin</a></li>
                 <li><a href="contact.html">Contact Us</a></li>
