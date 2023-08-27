@@ -1,1 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <title>Contact Us</title>
+    <style>
+        /* Reset some default styling */
+        body, h1, h2, p, ul, li {
+            margin: 0;
+            padding: 0;
+        }
 
+        /* Basic styling */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            animation: colorChange 10s infinite alternate;
+        }
+
+        @keyframes colorChange {
+            0% { background-color: #f4e7d2; } /* Warm beige */
+            50% { background-color: #c85a54; } /* Wine red */
+            100% { background-color: #f4e7d2; } /* Back to warm beige */
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            padding: 10px 0;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+        }
+
+        nav li {
+            position: relative; /* Add this line for dropdown positioning */
+            margin: 0 15px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: white;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #66ccff;
+        }
+
+        /* Dropdown menu styles */
+        ul.dropdown-menu {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background-color: #333;
+            border-top: 2px solid #66ccff;
+            z-index: 1;
+            min-width: 150px;
+        }
+
+        nav li:hover > ul.dropdown-menu {
+            display: block;
+        }
+
+        ul.dropdown-menu li {
+            margin: 0;
+        }
+
+        ul.dropdown-menu a {
+            color: white;
+            padding: 10px;
+            display: block;
+            text-decoration: none;
+            transition: background-color 0.3s;
+        }
+
+        ul.dropdown-menu a:hover {
+            background-color: #66ccff;
+        }
+        
+        /* Additional styles for a fancy look */
+        .redirect-link a {
+            background-color: #66ccff;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: background-color 0.3s;
+        }
+
+        .redirect-link a:hover {
+            background-color: #ff3366;
+        }
+       main {
+            padding: 20px;
+            margin: 0 auto;
+            max-width: 800px;
+        }
+
+        h2 {
+            margin-top: 20px;
+            font-size: 28px;
+            color: #333;
+            text-align: center;
+        }
+
+        .contact-form {
+            padding: 40px;
+            background-color: #f9f9f9;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        form {
+            display: grid;
+            gap: 15px;
+        }
+
+        label {
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 5px;
+            display: block;
+        }
+
+        input, select, textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+            transition: border-color 0.3s;
+        }
+
+        input:focus, select:focus, textarea:focus {
+            outline: none;
+            border-color: #66ccff;
+        }
+
+        button {
+            background-color: #66ccff;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            font-size: 18px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            margin-top: 20px;
+            width: 100%;
+        }
+
+        button:hover {
+            background-color: #3385ff;
+        }
+
+        .contact-info {
+            margin-top: 40px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            padding: 20px;
+            text-align: center;
+        }
+
+        .contact-info h3 {
+            font-size: 24px;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .contact-info p {
+            font-size: 16px;
+            color: #555;
+            margin-bottom: 10px;
+        }
+        /* Responsive styles */
+         /* Footer styles */
+        footer {
+            background-color: #333;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .footer-content p {
+            margin: 0;
+        }
+
+        .footer-content ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            gap: 20px;
+        }
+
+        .footer-content a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .footer-content a:hover {
+            color: #66ccff;
+        }
+
+    </style>
+    <title>VAMT Charity</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="who-we-are.html">Who We Are</a></li>
+                <li>
+                    <a href="vamt-archives.html">VAMT Archives &#9662;</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="vamt-archives.html#about-va">About VA</a></li>
+                        <li><a href="vamt-archives.html#testimonials">Testimonials</a></li>
+                        <li><a href="vamt-archives.html#vamt-mission">VAMT's Mission</a></li>
+                    </ul>
+                </li>        
+                <li><a href="donations.html">Donate</a></li>
+                <li><a href="admin-login.html">Admin</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+ <main>
+        <section class="contact-form">
+            <h2>Contact Us</h2>
+            <form action="process_form.php" method="post">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                
+                <label for="query">Query Type:</label>
+                <select id="query" name="query" required>
+                    <option value="general">General Inquiry</option>
+                    <option value="donation">Donation</option>
+                    <option value="volunteer">Volunteer</option>
+                    <!-- Add more options as needed -->
+                </select>
+                
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+                
+                <button type="submit">Submit</button>
+            </form>
+        </section>
+
+        <section class="contact-info">
+            <h3>Base Address</h3>
+            <p>123 VAMT Street, Cityville</p>
+            <p>Country</p>
+
+            <h3>Operating Hours</h3>
+            <p>Monday - Friday: 9:00 AM - 5:00 PM</p>
+            <p>Saturday: 10:00 AM - 2:00 PM</p>
+            <p>Sunday: Closed</p>
+
+            <h3>Mailing Address</h3>
+            <p>P.O. Box 456</p>
+            <p>Cityville, Country</p>
+        </section>
+    </main>
+    
+    <footer>
+        <!-- Footer content here -->
+    </footer>
+</body>
+</html>
