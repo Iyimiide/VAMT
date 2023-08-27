@@ -177,7 +177,23 @@
             </ul>
         </nav>
     </header>
-    
+    <script>
+    // JavaScript code for handling dropdown menu
+    document.addEventListener("DOMContentLoaded", function () {
+        const dropdownTriggers = document.querySelectorAll(".dropdown-trigger");
+
+        dropdownTriggers.forEach(trigger => {
+            trigger.addEventListener("mouseenter", function () {
+                this.querySelector(".dropdown-menu").style.display = "block";
+            });
+
+            trigger.addEventListener("mouseleave", function () {
+                this.querySelector(".dropdown-menu").style.display = "none";
+            });
+        });
+    });
+</script>
+
     <main>
         <section class="about-us-content">
             <h2>About Us</h2>
