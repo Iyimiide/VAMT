@@ -80,6 +80,9 @@
         /* Additional CSS for the About Us page */
         
            .about-section {
+.about-section {
+    display: flex;
+    flex-direction: column; /* Display the main section on top */
     margin-top: 40px;
     padding: 20px;
     background-color: #fff;
@@ -89,19 +92,24 @@
 
 .about-subsection {
     display: flex; /* Display subsections side by side */
+    flex-wrap: wrap;
     gap: 20px;
     margin-bottom: 20px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 50%; /* Spherical container */
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
     flex-basis: calc(50% - 10px); /* Two subsections side by side */
 }
 
 .about-subsection h3 {
-    font-size: 24px;
+    font-size: 20px; /* Slightly reduced font size */
     color: #333;
     margin-bottom: 10px;
 }
 
 .about-subsection p {
-    font-size: 16px;
+    font-size: 14px; /* Slightly reduced font size */
     color: #555;
     line-height: 1.6;
 }
