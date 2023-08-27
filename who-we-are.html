@@ -169,30 +169,60 @@
             margin: 0 auto;
         }
 
-        .faq-section {
-            padding: 60px 0;
+        /* FAQ */
+
+        .faq {
+            margin-top: 20px;
+        }
+        
+        .question {
+            cursor: pointer;
+            margin-bottom: 10px;
+        }
+        
+        .answer {
+            display: none;
+            padding: 10px;
+            background-color: #f9f9f9;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+         /* Footer styles */
+        footer {
+            background-color: #333;
+            color: white;
+            padding: 20px 0;
             text-align: center;
         }
 
-        .faq-section h2 {
-            font-size: 32px;
-            margin-bottom: 20px;
-        }
-
-        .faq {
-            max-width: 800px;
+        .footer-content {
+            max-width: 1200px;
             margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
         }
 
-        .faq h3 {
-            font-size: 24px;
-            margin-top: 20px;
+        .footer-content p {
+            margin: 0;
         }
 
-        .faq p {
-            font-size: 18px;
-            color: #555;
-            margin-bottom: 20px;
+        .footer-content ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            gap: 20px;
+        }
+
+        .footer-content a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .footer-content a:hover {
+            color: #66ccff;
         }
     </style>
 </head>
@@ -263,19 +293,47 @@
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor libero et velit suscipit, at blandit libero eleifend. Nulla facilisi.</p>
     </div>
 
-    <div class="faq-section">
-        <h2>Frequently Asked Questions</h2>
-        <div class="faq">
-            <h3>Question 1?</h3>
-            <p>Answer to question 1.</p>
-            <h3>Question 2?</h3>
-            <p>Answer to question 2.</p>
-            <!-- Add more FAQs as needed -->
+    <section class="about-subsection">
+    <h3>FAQ</h3>
+    <div class="faq">
+        <div class="question">
+            <h4>How can I donate?</h4>
+            <div class="answer">
+                <p>You can donate by visiting our <a href="donations.html">donations page</a> and following the instructions there.</p>
+            </div>
         </div>
+        <div class="question">
+            <h4>Can I volunteer for events?</h4>
+            <div class="answer">
+                <p>Yes, we welcome volunteers for our events. Please visit our <a href="volunteer.html">volunteer page</a> for more information.</p>
+            </div>
+        </div>
+        <!-- Add more questions and answers as needed -->
     </div>
+</section>
+        <!-- Add this script before the closing </body> tag -->
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                const questions = document.querySelectorAll(".question");
+        
+                questions.forEach(question => {
+                    question.addEventListener("click", function () {
+                        const answer = this.querySelector(".answer");
+                        answer.style.display = answer.style.display === "block" ? "none" : "block";
+                    });
+                });
+            });
+        </script>
+
 
     <footer>
-        <!-- Footer content here -->
+<section class="footer-content">
+            <p>&copy; 2023 VAMT Charity. All rights reserved.</p>
+            <ul>
+                <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                <li><a href="terms-of-use.html">Terms of Use</a></li>
+            </ul>
+        </section>
     </footer>
 </body>
 </html>
