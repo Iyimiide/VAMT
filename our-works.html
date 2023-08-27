@@ -4,106 +4,78 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Our Works - VAMT Charity</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.5.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
-        /* Your additional CSS styles here */
-        header {
-            background-color: #333;
-            color: white;
-            padding: 10px 0;
+        /* Your CSS styles here */
+        /* Add your custom styles */
+        body {
+            font-family: Arial, sans-serif;
         }
-
-        nav ul {
-            list-style: none;
+        .project-section {
             display: flex;
+            justify-content: space-between;
+            padding: 40px;
+        }
+        .project {
+            width: calc(50% - 20px);
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .slideshow {
+            display: flex;
+            align-items: center;
             justify-content: center;
+            margin: 20px 0;
         }
-
-        nav li {
-            position: relative;
-            margin: 0 15px;
+        .slideshow img {
+            max-width: 100%;
+            height: auto;
+            margin: 0 10px;
         }
-
-        nav a {
-            text-decoration: none;
-            color: white;
-            transition: color 0.3s;
-        }
-
-        nav a:hover {
-            color: #66ccff;
-        }
-
-        /* ... Your other styles ... */
     </style>
 </head>
 <body>
     <header>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="who-we-are.html">Who We Are</a></li>
-                <li><a href="our-works.html">Our Works</a></li>
-                <li><a href="donations.html">Donate</a></li>
-                <li><a href="admin-login.html">Admin</a></li>
-                <li><a href="contact.html">Contact Us</a></li>
-            </ul>
-        </nav>
+        <!-- Your navigation code here -->
     </header>
 
     <main>
-        <section class="our-works-section">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-3">
-                        <div class="work-item">
-                            <div class="work-icon">
-                                <i class="bi bi-heart"></i>
-                            </div>
-                            <h3>Healthcare</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                        </div>
-                    </div>
-                    <div class="col-md-3">
-                        <div class="work-item">
-                            <div class="work-icon">
-                                <i class="bi bi-people"></i>
-                            </div>
-                            <h3>Education</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                        </div>
-                    </div>
-                    <div class="col-md-3">
-                        <div class="work-item">
-                            <div class="work-icon">
-                                <i class="bi bi-shield"></i>
-                            </div>
-                            <h3>Human Rights</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                        </div>
-                    </div>
-                    <div class="col-md-3">
-                        <div class="work-item">
-                            <div class="work-icon">
-                                <i class="bi bi-globe"></i>
-                            </div>
-                            <h3>Sustainability</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                        </div>
-                    </div>
+        <section class="project-section">
+            <div class="project">
+                <h2>Project Title 1</h2>
+                <p>Date: Date 1</p>
+                <div class="slideshow">
+                    <img src="project1-image1.jpg" alt="Project 1 Image 1">
+                    <img src="project1-image2.jpg" alt="Project 1 Image 2">
+                    <!-- Add more images for Project 1 -->
                 </div>
+                <p>Description: Description of Project 1.</p>
+            </div>
+            <div class="project">
+                <h2>Project Title 2</h2>
+                <p>Date: Date 2</p>
+                <div class="slideshow">
+                    <img src="project2-image1.jpg" alt="Project 2 Image 1">
+                    <img src="project2-image2.jpg" alt="Project 2 Image 2">
+                    <!-- Add more images for Project 2 -->
+                </div>
+                <p>Description: Description of Project 2.</p>
             </div>
         </section>
+
+        <!-- Add more project sections for other projects -->
+
     </main>
+
     <footer>
-        <section class="footer-content">
-            <p>&copy; 2023 VAMT Charity. All rights reserved.</p>
-            <ul>
-                <li><a href="privacy-policy.html">Privacy Policy</a></li>
-                <li><a href="terms-of-use.html">Terms of Use</a></li>
-            </ul>
-        </section>
+        <!-- Your footer content here -->
     </footer>
 
+    <script>
+        // JavaScript code for slideshow functionality
+        // You can use libraries like Bootstrap Carousel or implement your own
+        // Example: https://getbootstrap.com/docs/4.6/components/carousel/
+    </script>
 </body>
 </html>
