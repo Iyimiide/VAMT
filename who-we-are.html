@@ -79,10 +79,10 @@
         }
         /* Additional CSS for the About Us page */
         
-        .about-section {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 20px;
+                .about-section {
+            display: flex; /* Display the subsections in a flex container */
+            flex-wrap: wrap; /* Allow wrapping to a new row when needed */
+            gap: 20px; /* Add a gap between subsections */
             margin-top: 40px;
             padding: 20px;
             background-color: #fff;
@@ -91,7 +91,7 @@
         }
         
         .about-subsection {
-            flex-basis: calc(50% - 10px); /* Two subsections side by side */
+            flex-basis: calc(50% - 10px); /* Half the width minus the gap */
             margin-bottom: 20px;
             padding: 20px;
             background-color: #f9f9f9;
