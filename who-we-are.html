@@ -96,13 +96,10 @@ ul.dropdown-menu a:hover {
         }
         /* Additional CSS for the About Us page */
         
-       /* Style for the about section */
+/* Style for the main About section */
 .about-section {
     display: flex;
-    flex-direction: row; /* Display subsections side by side */
-    flex-wrap: wrap;
-    justify-content: center; /* Center-align the subsections horizontally */
-    align-items: flex-start; /* Align subsections at the top vertically */
+    flex-direction: column; /* Display the main section on top */
     margin-top: 40px;
     padding: 20px;
     background-color: #fff;
@@ -110,15 +107,16 @@ ul.dropdown-menu a:hover {
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
 
-/* Style for each subsection */
+/* Style for each subsection of the About section */
 .about-subsection {
-    flex-basis: calc(33.33% - 20px); /* Three subsections side by side */
+    display: flex; /* Display subsections side by side */
+    gap: 20px;
     margin-bottom: 20px;
     padding: 20px;
     background-color: #f9f9f9;
     border-radius: 10px;
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
-    text-align: center;
+    flex-grow: 1; /* Distribute available space equally among subsections */
 }
 
 .about-subsection h3 {
