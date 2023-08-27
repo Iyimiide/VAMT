@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Us - VAMT Charity</title>
     <style>
-        /* Style for the logo container */
+     /* Style for the logo container */
         .logo-container {
             display: flex;
             align-items: center; /* Center the logo vertically */
@@ -17,7 +17,7 @@
             height: auto; /* Automatically adjust the height while maintaining aspect ratio */
             margin-right: 20px; /* Add spacing between logo and navigation items */
         }
-       header {
+            header {
     background-color: white; /* Change background color to white */
     color: darkgoldenrod; /* Change font color to dark gold */
     padding: 10px 0;
@@ -47,58 +47,39 @@ header li {
     position: relative; /* Add this line for dropdown positioning */
 }
 
-        nav ul {
-            list-style: none;
-            display: flex;
-            justify-content: center;
-        }
+/* Dropdown menu styles */
+ul.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #333;
+    border-top: 2px solid #66ccff;
+    z-index: 1;
+    min-width: 150px;
+}
 
-        nav li {
-            position: relative; /* Add this line for dropdown positioning */
-            margin: 0 15px;
-        }
+nav li:hover > ul.dropdown-menu {
+    display: block;
+}
 
-        nav a {
-            text-decoration: none;
-            color: white;
-            transition: color 0.3s;
-        }
+ul.dropdown-menu li {
+    margin: 0;
+}
 
-        nav a:hover {
-            color: #66ccff;
-        }
+ul.dropdown-menu a {
+    color: white;
+    padding: 10px;
+    display: block;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
 
-        /* Dropdown menu styles */
-        ul.dropdown-menu {
-            display: none;
-            position: absolute;
-            top: 100%;
-            left: 0;
-            background-color: #333;
-            border-top: 2px solid #66ccff;
-            z-index: 1;
-            min-width: 150px;
-        }
+ul.dropdown-menu a:hover {
+    background-color: #66ccff;
+}
 
-        nav li:hover > ul.dropdown-menu {
-            display: block;
-        }
 
-        ul.dropdown-menu li {
-            margin: 0;
-        }
-
-        ul.dropdown-menu a {
-            color: white;
-            padding: 10px;
-            display: block;
-            text-decoration: none;
-            transition: background-color 0.3s;
-        }
-
-        ul.dropdown-menu a:hover {
-            background-color: #66ccff;
-        }
         
         /* Additional styles for a fancy look */
         .redirect-link a {
