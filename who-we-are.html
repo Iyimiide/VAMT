@@ -25,10 +25,26 @@
     justify-content: space-between; /* Create space for the logo at the top left */
     align-items: center;
 }
-        header a {
+
+header a {
     color: darkgoldenrod; /* Change link color to dark gold */
     text-decoration: none;
     transition: color 0.3s;
+}
+
+header a:hover {
+    color: #66ccff;
+}
+
+header ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+
+header li {
+    margin: 0 15px;
+    position: relative; /* Add this line for dropdown positioning */
 }
 
         nav ul {
