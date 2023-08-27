@@ -24,64 +24,69 @@
             100% { background-color: #f4e7d2; } /* Back to warm beige */
         }
 
-        header {
-            background-color: #333;
-            color: white;
-            padding: 10px 0;
-        }
+    header {
+    background-color: white; /* Change background color to white */
+    color: darkgoldenrod; /* Change font color to dark gold */
+    padding: 10px 0;
+    display: flex;
+    justify-content: space-between; /* Create space for the logo at the top left */
+    align-items: center;
+}
 
-        nav ul {
-            list-style: none;
-            display: flex;
-            justify-content: center;
-        }
+header a {
+    color: darkgoldenrod; /* Change link color to dark gold */
+    text-decoration: none;
+    transition: color 0.3s;
+}
 
-        nav li {
-            position: relative; /* Add this line for dropdown positioning */
-            margin: 0 15px;
-        }
+header a:hover {
+    color: #66ccff;
+}
 
-        nav a {
-            text-decoration: none;
-            color: white;
-            transition: color 0.3s;
-        }
+header ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
 
-        nav a:hover {
-            color: #66ccff;
-        }
+header li {
+    margin: 0 15px;
+    position: relative; /* Add this line for dropdown positioning */
+}
 
-        /* Dropdown menu styles */
-        ul.dropdown-menu {
-            display: none;
-            position: absolute;
-            top: 100%;
-            left: 0;
-            background-color: #333;
-            border-top: 2px solid #66ccff;
-            z-index: 1;
-            min-width: 150px;
-        }
+/* Dropdown menu styles */
+ul.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #333;
+    border-top: 2px solid #66ccff;
+    z-index: 1;
+    min-width: 150px;
+}
 
-        nav li:hover > ul.dropdown-menu {
-            display: block;
-        }
+nav li:hover > ul.dropdown-menu {
+    display: block;
+}
 
-        ul.dropdown-menu li {
-            margin: 0;
-        }
+ul.dropdown-menu li {
+    margin: 0;
+}
 
-        ul.dropdown-menu a {
-            color: white;
-            padding: 10px;
-            display: block;
-            text-decoration: none;
-            transition: background-color 0.3s;
-        }
+ul.dropdown-menu a {
+    color: white;
+    padding: 10px;
+    display: block;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
 
-        ul.dropdown-menu a:hover {
-            background-color: #66ccff;
-        }
+ul.dropdown-menu a:hover {
+    background-color: #66ccff;
+}
+
+
         
         /* Additional styles for a fancy look */
         .redirect-link a {
