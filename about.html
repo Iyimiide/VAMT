@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - VAMT Charity</title>
+    <style>
+      header {
+            background-color: #333;
+            color: white;
+            padding: 10px 0;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+        }
+
+        nav li {
+            position: relative; /* Add this line for dropdown positioning */
+            margin: 0 15px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: white;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #66ccff;
+        }
+
+        /* Dropdown menu styles */
+        ul.dropdown-menu {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background-color: #333;
+            border-top: 2px solid #66ccff;
+            z-index: 1;
+            min-width: 150px;
+        }
+
+        nav li:hover > ul.dropdown-menu {
+            display: block;
+        }
+
+        ul.dropdown-menu li {
+            margin: 0;
+        }
+
+        ul.dropdown-menu a {
+            color: white;
+            padding: 10px;
+            display: block;
+            text-decoration: none;
+            transition: background-color 0.3s;
+        }
+
+        ul.dropdown-menu a:hover {
+            background-color: #66ccff;
+        }
+        
+        /* Additional styles for a fancy look */
+        .redirect-link a {
+            background-color: #66ccff;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: background-color 0.3s;
+        }
+
+        .redirect-link a:hover {
+            background-color: #ff3366;
+        }
+        /* Additional CSS for the About Us page */
+        .about-section {
+            background-color: #f9f9f9;
+            padding: 60px 0;
+            text-align: center;
+        }
+
+        .about-section h2 {
+            font-size: 32px;
+            margin-bottom: 20px;
+        }
+
+        .about-section p {
+            font-size: 18px;
+            color: #555;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .team-section {
+            padding: 60px 0;
+            text-align: center;
+        }
+
+        .team-member {
+            display: inline-block;
+            margin: 20px;
+        }
+
+        .team-member img {
+            border-radius: 50%;
+            max-width: 180px;
+            height: auto;
+        }
+
+        .team-member h3 {
+            margin-top: 10px;
+            font-size: 24px;
+        }
+
+        .team-member p {
+            font-size: 18px;
+            color: #555;
+        }
+
+        .mission-section {
+            padding: 60px 0;
+            background-color: #fff;
+            text-align: center;
+        }
+
+        .mission-section h2 {
+            font-size: 32px;
+            margin-bottom: 20px;
+        }
+
+        .mission-section p {
+            font-size: 18px;
+            color: #555;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .money-section {
+            padding: 60px 0;
+            background-color: #f9f9f9;
+            text-align: center;
+        }
+
+        .money-section h2 {
+            font-size: 32px;
+            margin-bottom: 20px;
+        }
+
+        .money-section p {
+            font-size: 18px;
+            color: #555;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .faq-section {
+            padding: 60px 0;
+            text-align: center;
+        }
+
+        .faq-section h2 {
+            font-size: 32px;
+            margin-bottom: 20px;
+        }
+
+        .faq {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .faq h3 {
+            font-size: 24px;
+            margin-top: 20px;
+        }
+
+        .faq p {
+            font-size: 18px;
+            color: #555;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+<nav>
+  <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="who-we-are.html">Who We Are</a></li>
+                <li>
+                    <a href="vamt-archives.html">VAMT Archives &#9662;</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="vamt-archives.html#about-va">About VA</a></li>
+                        <li><a href="vamt-archives.html#testimonials">Testimonials</a></li>
+                        <li><a href="vamt-archives.html#vamt-mission">VAMT's Mission</a></li>
+                    </ul>
+                </li>        
+                <li><a href="donations.html">Donate</a></li>
+                <li><a href="admin-login.html">Admin</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="about-section">
+        <h2>About VAMT Charity</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor libero et velit suscipit, at blandit libero eleifend. Nulla facilisi.</p>
+    </div>
+
+    <div class="team-section">
+        <h2>Meet Our Team</h2>
+        <div class="team-member">
+            <img src="team-member1.jpg" alt="Team Member 1">
+            <h3>John Doe</h3>
+            <p>CEO</p>
+        </div>
+        <div class="team-member">
+            <img src="team-member2.jpg" alt="Team Member 2">
+            <h3>Jane Smith</h3>
+            <p>Director of Programs</p>
+        </div>
+        <!-- Add more team members as needed -->
+    </div>
+
+    <div class="mission-section">
+        <h2>Our Mission</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor libero et velit suscipit, at blandit libero eleifend. Nulla facilisi.</p>
+    </div>
+
+    <div class="money-section">
+        <h2>Where the Money Goes</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor libero et velit suscipit, at blandit libero eleifend. Nulla facilisi.</p>
+    </div>
+
+    <div class="faq-section">
+        <h2>Frequently Asked Questions</h2>
+        <div class="faq">
+            <h3>Question 1?</h3>
+            <p>Answer to question 1.</p>
+            <h3>Question 2?</h3>
+            <p>Answer to question 2.</p>
+            <!-- Add more FAQs as needed -->
+        </div>
+    </div>
+
+    <footer>
+        <!-- Footer content here -->
+    </footer>
+</body>
+</html>
