@@ -115,52 +115,45 @@ ul.dropdown-menu a:hover {
         .redirect-link a:hover {
             background-color: #ff3366;
         }
-         /* Responsive styles */
-/* Default styles for larger screens */
-.slideshow-container {
-    max-width: 1000px;
-    margin: auto;
-    position: relative;
-    text-align: center; /* Center the slideshow container */
-}
-
-.slide {
-    display: none;
-}
-
-img {
-    max-width: 70%;
-    height: auto;
-    display: block;
-    margin: auto;
-}
-
-.prev, .next {
-    cursor: pointer;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    font-size: 18px;
-}
-
-.next {
-    right: 10px;
-}
-
-.prev {
-    left: 10px;
-}
-
-/* Media query for smaller screens */
+/* Responsive styles */
 @media screen and (max-width: 768px) {
-    .slideshow-container {
+    /* Slideshow container styles */
+   .slideshow-container {
         max-width: 100%;
     }
+        position: relative;
+            max-width: 1000px;
+            margin: auto;
+        }
 
-    img {
-        max-width: 40%; /* Adjust this value for your desired width */
-        height: auto; /* Maintain aspect ratio */
-    }
+        .slide {
+            display: none;
+            text-align: center;
+        }
+
+        img {
+            max-width: 50%;
+            height: auto;
+            display: block;
+            margin: auto;
+        }
+
+        .prev, .next {
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 18px;
+        }
+
+        .next {
+            right: 10px;
+        }
+
+        .prev {
+            left: 10px;
+        }
+
 
         .redirect-link {
             text-align: center;
@@ -289,9 +282,6 @@ img {
         .footer-content a:hover {
             color: #66ccff;
         }
-
-        /* Rest of the styles remain unchanged */
-
     </style>
     <title>VAMT Charity</title>
 </head>
