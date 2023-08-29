@@ -116,44 +116,51 @@ ul.dropdown-menu a:hover {
             background-color: #ff3366;
         }
          /* Responsive styles */
+/* Default styles for larger screens */
+.slideshow-container {
+    max-width: 1000px;
+    margin: auto;
+    position: relative;
+}
+
+.slide {
+    display: none;
+    text-align: center;
+}
+
+img {
+    max-width: 100%; /* Make images responsive within the container */
+    height: auto;
+    display: block;
+    margin: auto;
+}
+
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 18px;
+}
+
+.next {
+    right: 10px;
+}
+
+.prev {
+    left: 10px;
+}
+
+/* Media query for smaller screens */
 @media screen and (max-width: 768px) {
-    /* Slideshow container styles */
-   .slideshow-container {
-        max-width: 50%;
+    .slideshow-container {
+        max-width: 100%;
     }
-        position: relative;
-            max-width: 1000px;
-            margin: auto;
-        }
 
-        .slide {
-            display: none;
-            text-align: center;
-        }
-
-        img {
-            max-width: 50%;
-            height: auto;
-            display: block;
-            margin: auto;
-        }
-
-        .prev, .next {
-            cursor: pointer;
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            font-size: 18px;
-        }
-
-        .next {
-            right: 10px;
-        }
-
-        .prev {
-            left: 10px;
-        }
-
+    img {
+        max-width: 70%; /* Adjust this value for your desired width */
+        height: auto; /* Maintain aspect ratio */
+    }
 
         .redirect-link {
             text-align: center;
