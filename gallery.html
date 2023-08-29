@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Gallery</title>
+    <style>
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    padding: 20px;
+}
+
+.image-container {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+}
+
+.image-container img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+.image-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.image-container:hover .image-overlay {
+    opacity: 1;
+}
+
+.image-overlay h2 {
+    color: white;
+    font-size: 24px;
+    text-align: center;
+    margin: 0;
+    padding: 10px;
+}
+    </style>
+
+</head>
+  
+<body>
+    <header>
+        <h1>Image Gallery</h1>
+    </header>
+    <section class="gallery">
+        <div class="image-container">
+            <img src="Assets/gm&gp.jpeg" alt="Image 1">
+        </div>
+        <div class="image-container">
+            <img src="Assets/wg3.jpeg" alt="Image 2">
+        </div>
+        <div class="image-container">
+            <img src="Assets/wg2.jpeg" alt="Image 3">
+        </div>
+<div class="image-container">
+            <img src="Assets/wg4.jpeg" alt="Image 4">
+        </div>
+    <div class="image-container">
+            <img src="Assets/wg5.jpeg" alt="Image 5">
+        </div>
+      <div class="image-container">
+            <img src="Assets/wg6.jpeg" alt="Image 6">
+        </div>
+      <div class="image-container">
+            <img src="Assets/wg7.jpeg" alt="Image 7">
+        </div>
+      <div class="image-container">
+            <img src="Assets/wg8.jpeg" alt="Image 8">
+        </div>
+      <div class="image-container">
+            <img src="Assets/wg9.jpeg" alt="Image 9">
+        </div>
+      
+    </section>
+    <script src="script2.js"></script>
+</body>
+</html>
