@@ -1,9 +1,9 @@
-// JavaScript to open the image overlay
-const imageContainers = document.querySelectorAll('.image-container');
+document.addEventListener('DOMContentLoaded', () => {
+    const imageContainers = document.querySelectorAll('.image-container');
 
-imageContainers.forEach(container => {
-    container.addEventListener('click', () => {
-        const overlay = container.querySelector('.image-overlay');
-        overlay.classList.toggle('open');
+    imageContainers.forEach(container => {
+        container.addEventListener('click', () => {
+            container.classList.toggle('clicked');
+        });
     });
 });
