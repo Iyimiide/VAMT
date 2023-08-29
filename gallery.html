@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Interactive Gallery</title>
+    <title>Gallery</title>
     <style>
 body {
     font-family: Arial, sans-serif;
@@ -29,6 +29,8 @@ header {
 .image-container {
     position: relative;
     overflow: hidden;
+    width: 150px; /* Adjust the tile size */
+    height: 150px; /* Adjust the tile size */
     border-radius: 10px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     cursor: pointer;
@@ -39,6 +41,11 @@ header {
     max-width: 100%;
     height: auto;
     display: block;
+    transition: transform 0.3s ease-in-out;
+}
+
+.image-container:hover {
+    transform: scale(1.1); /* Enlarge the tile on hover */
 }
 
 .image-overlay {
@@ -66,13 +73,40 @@ header {
     margin: 0;
     padding: 10px;
 }
+
+/* Larger image view */
+.image-container.clicked img {
+    transform: scale(2); /* Enlarge the image when clicked */
+    transition: transform 0.3s ease-in-out;
+}
     </style>
 
 </head>
   
 <body>
     <header>
-        <h1>Image Gallery</h1>
+           <div class="logo-container">
+        <img src="Assets/logo1.png" alt="VAMT Charity Logo" class="logo">
+    </div>
+    <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="our-works.html">Our Projects</a></li>
+                <li>
+                    <a href="who-we-are.html">About Us &#9662;</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#about">About VAMT Charity</a></li>
+                        <li><a href="#team">Meet Our Team</a></li>
+                        <li><a href="#mission">Our Mission</a></li>
+                        <li><a href="#money">Where the Money Goes</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="#faq">FAQ</a></li>
+                    </ul>
+                    </li>        
+                <li><a href="donations.html">Donate</a></li>
+                <li><a href="admin-login.html">Admin</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+        </nav>
     </header>
     <section class="gallery">
         <div class="image-container">
