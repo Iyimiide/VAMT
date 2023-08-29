@@ -5,12 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gallery</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-        }
-
        header {
     background-color: white; /* Change the background color to white */
     color: darkgoldenrod; /* Change the font color to dark gold */
@@ -89,7 +83,17 @@ ul.dropdown-menu a:hover {
         .redirect-link a:hover {
             background-color: #ff3366;
         }
+body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            animation: colorChange 10s infinite alternate;
+        }
 
+        @keyframes colorChange {
+            0% { background-color: #f4e7d2; } /* Warm beige */
+            50% { background-color: #c85a54; } /* Wine red */
+            100% { background-color: #f4e7d2; } /* Back to warm beige */
+        }
         .gallery {
             display: flex;
             flex-wrap: wrap;
