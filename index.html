@@ -176,15 +176,19 @@ img {
         }
 
         .areas-of-work {
-            padding: 40px;
-            text-align: center;
-            color: #333;
-        }
+    padding: 40px;
+    text-align: center;
+    color: #333;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2; /* To ensure it's above other content */
+}
 
-        .work-area {
-            position: relative;
-        }
-
+.work-area {
+    
+}
         .work-area h3 {
             cursor: pointer;
         }
@@ -206,14 +210,19 @@ img {
             display: block;
         }
 
-        .foundation-events {
-            padding: 40px;
-            text-align: center;
-            color: #333;
-            background-color: #f9f9f9;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
+       .foundation-events {
+    padding: 40px;
+    text-align: center;
+    color: #333;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2; /* To ensure it's above other content */
+}
 
         .event {
             margin: 20px 0;
@@ -238,13 +247,18 @@ img {
             color: #777;
         }
 
-        .foundation-stats {
-            background-color: white;
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 20px;
-            font-weight: bold;
-        }
+       .foundation-stats {
+    background-color: white;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    font-weight: bold;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2; /* To ensure it's above other content */
+}
 
         .foundation-stats div {
             padding: 20px;
