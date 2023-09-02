@@ -176,6 +176,61 @@ ul.dropdown-menu a:hover {
             transform: scale(2); /* Enlarge the image when clicked */
             transition: transform 0.3s ease-in-out;
         }
+        
+            /* new edits */
+
+        @media screen and (max-width: 768px) {
+    /* Slideshow container styles */
+   .slideshow-container {
+        max-width: 100%;
+    }
+        position: relative;
+            max-width: 1000px;
+            margin: auto;
+        }
+
+        .slide {
+            display: none;
+            text-align: center;
+        }
+
+        img {
+            max-width: 50%;
+            height: auto;
+            display: block;
+            margin: auto;
+        }
+
+        .prev, .next {
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 18px;
+        }
+
+        .next {
+            right: 10px;
+        }
+
+        .prev {
+            left: 10px;
+        }
+
+
+        .redirect-link {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .redirect-link a {
+            background-color: #66ccff;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+        }
+
     </style>
 </head>
 <body>
@@ -234,7 +289,7 @@ ul.dropdown-menu a:hover {
             <img src="Assets/wg9.jpeg" alt="Image 9">
         </div>
     </section>
-
+    <script src="script.js"></script> 
     <script src="script2.js"></script>
 </body>
 </html>
