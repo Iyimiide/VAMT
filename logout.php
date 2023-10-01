@@ -1,6 +1,6 @@
 <?php
-require 'config2.php';
+require 'config.php';
 $_SESSION = [];
 session_unset();
 session_destroy();
-header("Location: login2.php");
+header("Location: login.php");
