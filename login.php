@@ -1,7 +1,7 @@
 <?php
-require 'config2.php';
+require 'config.php';
 if(!empty($_SESSION["id"])){
-  header("Location: landing2.php");
+  header("Location: landing.php");
 }
 if(isset($_POST["submit"])){
   $usernameemail = $_POST["usernameemail"];
@@ -12,7 +12,7 @@ if(isset($_POST["submit"])){
     if($password == $row['password']){
       $_SESSION["login"] = true;
       $_SESSION["id"] = $row["id"];
-      header("Location: landing2.php");
+      header("Location: landing.php");
     }
     else{
       echo "<div class='alert alert-danger'>Wrong Password</div>";
@@ -104,8 +104,6 @@ if(isset($_POST["submit"])){
               </div>
               <button type="submit" name="submit" class="btn btn-primary btn-block">Login</button>
             </form>
-            <div class="mt-3">
-              <a href="registration2.php">Create An Admin account</a>
                               <li> <a href="index.html">Home</a></li>
             </div>
           </div>
