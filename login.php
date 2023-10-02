@@ -26,62 +26,137 @@ if(isset($_POST["submit"])){
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Admin Login</title>
-<style>
-    body {
-      font-family: Arial, sans-serif;
-      background-color: #f8f9fa;
-    }
-    .container {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-    }
-    .card {
-      width: 100%;
-      max-width: 400px;
-      padding: 20px;
-      box-shadow: 0 0 5px rgba(0,0,0,0.1);
-    }
-    .card-header h2 {
-      text-align: center;
-      margin-bottom: 20px;
-    }
-    .form-group {
-      margin-bottom: 10px;
-    }
-    .form-control {
-      width: 100%;
-      padding: 10px;
-      font-size: 16px;
-      border: 1px solid #ddd;
-    }
-    .btn {
-      width: 100%;
-      padding: 10px;
-      font-size: 16px;
-      background-color: #007bff;
-      color: #fff;
-      border: none;
-      cursor: pointer;
-    }
-    .btn:hover {
-      background-color: #0056b3;
-    }
-    .mt-3 {
-      margin-top: 15px;
-      text-align: center;
-    }
-    .mt-3 a {
-      color: #007bff;
-      text-decoration: none;
-    }
-    .mt-3 a:hover {
-      color: #0056b3;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <!-- Include Swiper CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <style>
+.logo-container {
+            display: flex;
+            align-items: center; /* Center the logo vertically */
+            padding: 10px 20px; /* Add padding around the logo */
+        }
+        /* Style for the logo image */
+        .logo {
+            width: 100px; /* Adjust the width as needed */
+            height: auto; /* Automatically adjust the height while maintaining aspect ratio */
+            margin-right: 20px; /* Add spacing between logo and navigation items */
+        }
+header {
+    background-color: white; /* Change the background color to white */
+    color: darkgoldenrod; /* Change the font color to dark gold */
+    padding: 10px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+header a {
+    color: darkgoldenrod; /* Change link color to dark gold */
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+header a:hover {
+    color: #66ccff;
+}
+
+header ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+
+header li {
+    margin: 0 15px;
+    position: relative; /* Add this line for dropdown positioning */
+}
+
+/* Dropdown menu styles */
+ul.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #333;
+    border-top: 2px solid #66ccff;
+    z-index: 1;
+    min-width: 150px;
+}
+
+nav li:hover > ul.dropdown-menu {
+    display: block;
+}
+
+ul.dropdown-menu li {
+    margin: 0;
+}
+
+ul.dropdown-menu a {
+    color: white;
+    padding: 10px;
+    display: block;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+ul.dropdown-menu a:hover {
+    background-color: #66ccff;
+}
+
+
+        
+        /* Additional styles for a fancy look */
+        .redirect-link a {
+            background-color: #66ccff;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: background-color 0.3s;
+        }
+
+        .redirect-link a:hover {
+            background-color: #ff3366;
+        }
+         /* Footer styles */
+        footer {
+            background-color: #333;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .footer-content p {
+            margin: 0;
+        }
+
+        .footer-content ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            gap: 20px;
+        }
+
+        .footer-content a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .footer-content a:hover {
+            color: #66ccff;
+        }
   </style>
   </head>
 <body>
