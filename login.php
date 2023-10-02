@@ -1,26 +1,27 @@
 <?php
+session_start(); // Start a session
 require 'config.php';
-if(!empty($_SESSION["id"])){
-  header("Location: landing.php");
+
+if (!empty($_SESSION["id"])) {
+    header("Location: landing.php");
 }
-if(isset($_POST["submit"])){
-  $usernameemail = $_POST["usernameemail"];
-  $password = $_POST["password"];
-  $result = mysqli_query($conn, "SELECT * FROM tb_user WHERE username = '$usernameemail' OR email = '$usernameemail'");
-  $row = mysqli_fetch_assoc($result);
-  if(mysqli_num_rows($result) > 0){
-    if($password == $row['password']){
-      $_SESSION["login"] = true;
-      $_SESSION["id"] = $row["id"];
-      header("Location: landing.php");
+
+if (isset($_POST["submit"])) {
+    $usernameemail = $_POST["usernameemail"];
+    $password = $_POST["password"];
+    $result = mysqli_query($conn, "SELECT * FROM tb_user WHERE username = '$usernameemail' OR email = '$usernameemail'");
+    $row = mysqli_fetch_assoc($result);
+    if (mysqli_num_rows($result) > 0) {
+        if ($password == $row['password']) {
+            $_SESSION["login"] = true;
+            $_SESSION["id"] = $row["id"];
+            header("Location: landing.php");
+        } else {
+            echo "<div class='alert alert-danger'>Wrong Password</div>";
+        }
+    } else {
+        echo "<div class='alert alert-danger'>User Not Registered</div>";
     }
-    else{
-      echo "<div class='alert alert-danger'>Wrong Password</div>";
-    }
-  }
-  else{
-    echo "<div class='alert alert-danger'>User Not Registered</div>";
-  }
 }
 ?>
 <!DOCTYPE html>
@@ -158,33 +159,31 @@ ul.dropdown-menu a:hover {
             color: #66ccff;
         }
   </style>
-  </head>
+</head>
 <body>
-  <div class="container">
+<div class="container">
     <div class="row justify-content-center">
-      <div class="col-md-6 mt-5">
-        <div class="card">
-          <div class="card-header">
-            <h2 class="text-center">Admin</h2>
-          </div>
-          <div class="card-body">
-            <form action="" method="post" autocomplete="off">
-              <div class="form-group">
-                <label for="usernameemail">Username or Email:</label>
-                <input type="text" name="usernameemail" id="usernameemail" class="form-control" required>
-              </div>
-              <div class="form-group">
-                <label for="password">Password:</label>
-                <input type="password" name="password" id="password" class="form-control" required>
-              </div>
-              <button type="submit" name="submit" class="btn btn-primary btn-block">Login</button>
-            </form>
-                              <li> <a href="index.html">Home</a></li>
+        <div class="col-md-6 mt-5">
+            <div class="card">
+                <div class="card-header">
+                    <h2 class="text-center">Admin</h2>
+                </div>
+                <div class="card-body">
+                    <form action="" method="post" autocomplete="off">
+                        <div class="form-group">
+                            <label for="usernameemail">Username or Email:</label>
+                            <input type="text" name="usernameemail" id="usernameemail" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="password">Password:</label>
+                            <input type="password" name="password" id="password" class="form-control" required>
+                        </div>
+                        <button type="submit" name="submit" class="btn btn-primary btn-block">Login</button>
+                    </form>
+                </div>
             </div>
-          </div>
         </div>
-      </div>
     </div>
-  </div>
+</div>
 </body>
 </html>
