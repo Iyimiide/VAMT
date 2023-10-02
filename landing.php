@@ -165,8 +165,16 @@ ul.dropdown-menu a:hover {
       <h2>This is your Admin account</h2>
       <p> Your Admin priviledges are:.... </p>
     </main>
-    <footer>
-      <p>&copy; 2023 VAMT. All rights reserved.</p>
-    </footer>
+   <footer>
+    <section class="footer-content">
+        <p>&copy; 2023 VAMT Charity. All rights reserved.</p>
+        <ul>
+            <li><a href="privacy-policy.html">Privacy Policy</a></li>
+            <li><a href="terms-of-use.html">Terms of Use</a></li>
+            <!-- Add the logout button here -->
+            <li><a href="logout.php">Logout</a></li> <!-- Adjust the URL to match your logout page -->
+        </ul>
+    </section>
+</footer>
   </body>
 </html>
