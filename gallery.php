@@ -40,6 +40,25 @@ $result = $conn->query($sql_select_gallery_images);
             height: auto; /* Automatically adjust the height while maintaining aspect ratio */
             margin-right: 20px; /* Add spacing between logo and navigation items */
         }
+/* Reset some default styling */
+        body, h1, h2, p, ul, li {
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Basic styling */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            animation: colorChange 10s infinite alternate;
+        }
+
+        @keyframes colorChange {
+            0% { background-color: #f4e7d2; } /* Warm beige */
+            50% { background-color: #c85a54; } /* Wine red */
+            100% { background-color: #f4e7d2; } /* Back to warm beige */
+        }
+        
 header {
     background-color: white; /* Change the background color to white */
     color: darkgoldenrod; /* Change the font color to dark gold */
@@ -117,6 +136,69 @@ ul.dropdown-menu a:hover {
 
         .redirect-link a:hover {
             background-color: #ff3366;
+        }
+        /* Center the slideshow */
+        .slideshow-container {
+            max-width: 100%;
+            margin: auto;
+            text-align: center;
+        }
+
+        /* Minimize the images in the gallery and display them as icons side by side */
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .image-container {
+            position: relative;
+            overflow: hidden;
+            width: 50px; /* Adjust the size as needed */
+            height: 50px; /* Adjust the size as needed */
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            cursor: pointer;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .image-container img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .image-container:hover {
+            transform: scale(1.1); /* Enlarge the icon on hover */
+        }
+
+        .image-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        .image-container:hover .image-overlay {
+            opacity: 1;
+        }
+
+        .image-overlay h2 {
+            color: white;
+            font-size: 24px;
+            text-align: center;
+            margin: 0;
+            padding: 10px;
         }
          /* Footer styles */
         footer {
