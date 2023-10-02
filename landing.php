@@ -171,8 +171,7 @@ ul.dropdown-menu a:hover {
         <ul>
             <li><a href="privacy-policy.html">Privacy Policy</a></li>
             <li><a href="terms-of-use.html">Terms of Use</a></li>
-            <!-- Add the logout button here -->
-            <li><a href="logout.php">Logout</a></li> <!-- Adjust the URL to match your logout page -->
+            <li><a href="logout.php">Logout</a></li> 
         </ul>
     </section>
 </footer>
