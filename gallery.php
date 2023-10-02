@@ -2,24 +2,71 @@
 // Include the configuration file
 require 'config.php';
 
-// Insert sample data into gallery_images table
-$sql_insert_gallery_data = "
-INSERT INTO gallery_images (image_path, description)
-VALUES
-    ('Assets/gm&gp.jpeg', 'Description 1'),
-    ('Assets/wg8.jpeg', 'Description 2'),
-    ('Assets/wg6.jpeg', 'Description 3')
-";
+// Function to upload an image
+function uploadImage($file)
+{
+    // Specify the target directory for uploading images
+    $targetDir = "Assets/";
 
-if ($conn->query($sql_insert_gallery_data) === TRUE) {
-    echo "Data inserted into 'gallery_images' table successfully.<br>";
-} else {
-    echo "Error inserting data into 'gallery_images' table: " . $conn->error . "<br>";
+    // Generate a unique filename for the uploaded image
+    $uniqueFilename = uniqid() . '_' . basename($file["name"]);
+    $targetFilePath = $targetDir . $uniqueFilename;
+
+    // Check if the file is a valid image
+    $imageFileType = strtolower(pathinfo($targetFilePath, PATHINFO_EXTENSION));
+    $allowedExtensions = array("jpg", "jpeg", "png", "gif");
+
+    if (in_array($imageFileType, $allowedExtensions)) {
+        // Upload the image to the target directory
+        if (move_uploaded_file($file["tmp_name"], $targetFilePath)) {
+            return $targetFilePath;
+        } else {
+            return false; // Error uploading the image
+        }
+    } else {
+        return false; // Invalid file type
+    }
+}
+
+// Check if the form for uploading an image is submitted
+if (isset($_POST["upload"])) {
+    if ($_FILES["image"]["error"] === 0) {
+        // Upload the image
+        $imagePath = uploadImage($_FILES["image"]);
+
+        if ($imagePath) {
+            // Insert the uploaded image path into the gallery_images table
+            $description = $_POST["description"];
+            $sqlInsertImage = "INSERT INTO gallery_images (image_path, description) VALUES ('$imagePath', '$description')";
+
+            if ($conn->query($sqlInsertImage) === TRUE) {
+                echo "Image uploaded successfully.";
+            } else {
+                echo "Error inserting image into the database: " . $conn->error;
+            }
+        } else {
+            echo "Error uploading image. Please make sure it is a valid image file.";
+        }
+    } else {
+        echo "Error uploading image. Please try again.";
+    }
+}
+
+// Check if the form for deleting an image is submitted
+if (isset($_POST["delete"])) {
+    $imageId = $_POST["image_id"];
+    $sqlDeleteImage = "DELETE FROM gallery_images WHERE id = $imageId";
+
+    if ($conn->query($sqlDeleteImage) === TRUE) {
+        echo "Image deleted successfully.";
+    } else {
+        echo "Error deleting image from the database: " . $conn->error;
+    }
 }
 
 // Display images from gallery_images table
-$sql_select_gallery_images = "SELECT * FROM gallery_images";
-$result = $conn->query($sql_select_gallery_images);
+$sqlSelectGalleryImages = "SELECT * FROM gallery_images";
+$result = $conn->query($sqlSelectGalleryImages);
 ?>
 
 <!DOCTYPE html>
@@ -52,14 +99,7 @@ $result = $conn->query($sql_select_gallery_images);
             background-color: #f0f0f0;
             animation: colorChange 10s infinite alternate;
         }
-
-        @keyframes colorChange {
-            0% { background-color: #f4e7d2; } /* Warm beige */
-            50% { background-color: #c85a54; } /* Wine red */
-            100% { background-color: #f4e7d2; } /* Back to warm beige */
-        }
-        
-header {
+        header {
     background-color: white; /* Change the background color to white */
     color: darkgoldenrod; /* Change the font color to dark gold */
     padding: 10px 0;
@@ -137,107 +177,8 @@ ul.dropdown-menu a:hover {
         .redirect-link a:hover {
             background-color: #ff3366;
         }
-        /* Center the slideshow */
-        .slideshow-container {
-            max-width: 100%;
-            margin: auto;
-            text-align: center;
-        }
-
-        /* Minimize the images in the gallery and display them as icons side by side */
-        .gallery {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-            justify-content: center;
-            padding: 20px;
-        }
-
-        .image-container {
-            position: relative;
-            overflow: hidden;
-            width: 50px; /* Adjust the size as needed */
-            height: 50px; /* Adjust the size as needed */
-            border-radius: 10px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-            cursor: pointer;
-            transition: transform 0.3s ease-in-out;
-        }
-
-        .image-container img {
-            max-width: 100%;
-            height: auto;
-            display: block;
-            transition: transform 0.3s ease-in-out;
-        }
-
-        .image-container:hover {
-            transform: scale(1.1); /* Enlarge the icon on hover */
-        }
-
-        .image-overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.5);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            opacity: 0;
-            transition: opacity 0.3s;
-        }
-
-        .image-container:hover .image-overlay {
-            opacity: 1;
-        }
-
-        .image-overlay h2 {
-            color: white;
-            font-size: 24px;
-            text-align: center;
-            margin: 0;
-            padding: 10px;
-        }
-         /* Footer styles */
-        footer {
-            background-color: #333;
-            color: white;
-            padding: 20px 0;
-            text-align: center;
-        }
-
-        .footer-content {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .footer-content p {
-            margin: 0;
-        }
-
-        .footer-content ul {
-            list-style: none;
-            padding: 0;
-            display: flex;
-            gap: 20px;
-        }
-
-        .footer-content a {
-            color: white;
-            text-decoration: none;
-            transition: color 0.3s;
-        }
-
-        .footer-content a:hover {
-            color: #66ccff;
-        }
-    </style>
-    <title>VAMT Charity</title>
+            </style>
+<title>Gallery dashboard</title>
 </head>
 <body>
 <header>
@@ -264,25 +205,32 @@ ul.dropdown-menu a:hover {
                 <li><a href="contact.html">Contact Us</a></li>
         </nav>
     </header>
+<form action="" method="post" enctype="multipart/form-data">
+    <label for="image">Upload Image:</label>
+    <input type="file" name="image" id="image" required>
+    <label for="description">Description:</label>
+    <input type="text" name="description" id="description" required>
+    <button type="submit" name="upload">Upload</button>
+</form>
+
+<!-- Display images and provide delete functionality -->
+<div class="gallery">
     <?php
     if ($result->num_rows > 0) {
-        echo "<div class='gallery'>";
         while ($row = $result->fetch_assoc()) {
             echo "<div class='image-container'>";
             echo "<img src='" . $row['image_path'] . "' alt='" . $row['description'] . "'>";
+            echo "<div class='image-overlay'>";
+            echo "<h2>" . $row['description'] . "</h2>";
+            echo "<form action='' method='post'>";
+            echo "<input type='hidden' name='image_id' value='" . $row['id'] . "'>";
+            echo "<button type='submit' name='delete'>Delete</button>";
+            echo "</form>";
+            echo "</div>";
             echo "</div>";
         }
-        echo "</div>";
     } else {
         echo "No images found in the gallery.";
     }
     ?>
-<main>
-      <h1>WELCOME</h1>
-      <h2>This is your Admin account</h2>
-      <p> Your Admin priviledges are:.... </p>
-    </main>
-    <footer>
-      <p>&copy; 2023 VAMT. All rights reserved.</p>
-    </footer></body>
-</html>
+</div>
