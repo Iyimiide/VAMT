@@ -17,10 +17,10 @@ if (isset($_POST["submit"])) {
             $_SESSION["id"] = $row["id"];
             header("Location: landing.php");
         } else {
-            echo "<div class='alert alert-danger'>Wrong Password</div>";
+            $error_message = "Wrong Password";
         }
     } else {
-        echo "<div class='alert alert-danger'>User Not Registered</div>";
+        $error_message = "User Not Registered";
     }
 }
 ?>
@@ -29,136 +29,89 @@ if (isset($_POST["submit"])) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-    <!-- Include Swiper CSS -->
-    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
-    <style>
-.logo-container {
-            display: flex;
-            align-items: center; /* Center the logo vertically */
-            padding: 10px 20px; /* Add padding around the logo */
-        }
-        /* Style for the logo image */
-        .logo {
-            width: 100px; /* Adjust the width as needed */
-            height: auto; /* Automatically adjust the height while maintaining aspect ratio */
-            margin-right: 20px; /* Add spacing between logo and navigation items */
-        }
-header {
-    background-color: white; /* Change the background color to white */
-    color: darkgoldenrod; /* Change the font color to dark gold */
-    padding: 10px 0;
+ <style>
+     /* styles.css */
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
     display: flex;
     justify-content: center;
     align-items: center;
+    min-height: 100vh;
+}
+
+.card {
+    width: 100%;
+    max-width: 400px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-header a {
-    color: darkgoldenrod; /* Change link color to dark gold */
-    text-decoration: none;
-    transition: color 0.3s;
+.card-header {
+    text-align: center;
+    padding: 20px;
+    background-color: #007bff;
+    color: #fff;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
 }
 
-header a:hover {
-    color: #66ccff;
+.card-body {
+    padding: 20px;
 }
 
-header ul {
-    list-style: none;
-    display: flex;
-    align-items: center;
-}
-
-header li {
-    margin: 0 15px;
-    position: relative; /* Add this line for dropdown positioning */
-}
-
-/* Dropdown menu styles */
-ul.dropdown-menu {
-    display: none;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    background-color: #333;
-    border-top: 2px solid #66ccff;
-    z-index: 1;
-    min-width: 150px;
-}
-
-nav li:hover > ul.dropdown-menu {
-    display: block;
-}
-
-ul.dropdown-menu li {
+.card h2 {
+    font-size: 24px;
     margin: 0;
 }
 
-ul.dropdown-menu a {
-    color: white;
-    padding: 10px;
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-label {
+    font-weight: bold;
     display: block;
-    text-decoration: none;
-    transition: background-color 0.3s;
 }
 
-ul.dropdown-menu a:hover {
-    background-color: #66ccff;
+.form-control {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
 }
 
+.btn-primary {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    border: none;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+}
 
-        
-        /* Additional styles for a fancy look */
-        .redirect-link a {
-            background-color: #66ccff;
-            color: white;
-            padding: 10px 20px;
-            border-radius: 5px;
-            text-decoration: none;
-            transition: background-color 0.3s;
-        }
+.btn-primary:hover {
+    background-color: #0056b3;
+}
 
-        .redirect-link a:hover {
-            background-color: #ff3366;
-        }
-         /* Footer styles */
-        footer {
-            background-color: #333;
-            color: white;
-            padding: 20px 0;
-            text-align: center;
-        }
-
-        .footer-content {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .footer-content p {
-            margin: 0;
-        }
-
-        .footer-content ul {
-            list-style: none;
-            padding: 0;
-            display: flex;
-            gap: 20px;
-        }
-
-        .footer-content a {
-            color: white;
-            text-decoration: none;
-            transition: color 0.3s;
-        }
-
-        .footer-content a:hover {
-            color: #66ccff;
-        }
-  </style>
+.alert-danger {
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+    </style>
 </head>
 <body>
 <div class="container">
@@ -166,9 +119,12 @@ ul.dropdown-menu a:hover {
         <div class="col-md-6 mt-5">
             <div class="card">
                 <div class="card-header">
-                    <h2 class="text-center">Admin</h2>
+                    <h2 class="text-center">Admin Login</h2>
                 </div>
                 <div class="card-body">
+                    <?php if (isset($error_message)) : ?>
+                        <div class="alert alert-danger"><?php echo $error_message; ?></div>
+                    <?php endif; ?>
                     <form action="" method="post" autocomplete="off">
                         <div class="form-group">
                             <label for="usernameemail">Username or Email:</label>
