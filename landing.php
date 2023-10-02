@@ -96,6 +96,14 @@ ul.dropdown-menu a:hover {
         .redirect-link a:hover {
             background-color: #ff3366;
         }
+        
+        body {
+        background-image: url("Assets/landing.jpeg");
+        background-size: cover;
+        background-position: center;
+        background-color: white;
+}
+
          /* Footer styles */
         footer {
             background-color: #333;
